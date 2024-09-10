@@ -1,0 +1,766 @@
+<index.html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TradeShop: Revolutionize Your Online Store & Trades with AI-Powered Dropshipping</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;700&family=Audiowide&display=swap');
+
+    :root {
+        --primary-color: #00F0FF;
+        --secondary-color: #1A1A2E;
+        --accent-color: #FF00A8;
+        --bg-color: #0F0F1A;
+        --text-color: #E0E0E0;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    header {
+        background-color: rgba(26, 26, 46, 0.8);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .logo {
+        font-family: 'Audiowide', cursive;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--primary-color);
+        text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        letter-spacing: 2px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: var(--primary-color);
+    }
+
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-text {
+        flex: 1;
+        min-width: 300px;
+        z-index: 2;
+    }
+
+    h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 42px;
+        margin-bottom: 30px;
+        color: var(--primary-color);
+        text-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 24px;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+        font-weight: 600;
+        text-shadow: 0 0 10px rgba(255, 0, 168, 0.5);
+    }
+
+    .hero-text p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background-color: var(--accent-color);
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 20px rgba(255, 0, 168, 0.5);
+    }
+
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 30px rgba(255, 0, 168, 0.8);
+    }
+
+    .hero-image {
+        flex: 1;
+        min-width: 300px;
+        text-align: right;
+        z-index: 2;
+    }
+
+    .hero-image svg {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .features {
+        padding: 100px 0;
+        background-color: rgba(26, 26, 46, 0.8);
+    }
+
+    .features h2 {
+        text-align: center;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 36px;
+        margin-bottom: 50px;
+        color: var(--primary-color);
+    }
+
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .feature-item {
+        text-align: center;
+        padding: 30px;
+        border-radius: 10px;
+        background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
+        box-shadow: 0 8px 32px 0 rgba(0, 240, 255, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .feature-icon {
+        font-size: 48px;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+
+    .feature-item h3 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+    }
+
+    .stats {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+        padding: 50px 0;
+    }
+
+    .stats-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .stat-item {
+        margin: 20px;
+    }
+
+    .stat-item h4 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 36px;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+    }
+
+    .reviews {
+        padding: 100px 0;
+        background-color: rgba(26, 26, 46, 0.8);
+    }
+
+    .reviews h2 {
+        text-align: center;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 36px;
+        margin-bottom: 50px;
+        color: var(--primary-color);
+    }
+
+    .review-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    .review-item {
+        text-align: center;
+        padding: 30px;
+        border-radius: 10px;
+        background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
+        box-shadow: 0 8px 32px 0 rgba(0, 240, 255, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .review-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .review-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        border: 3px solid var(--primary-color);
+    }
+
+    .review-item h3 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: var(--primary-color);
+    }
+
+    .review-item p {
+        font-style: italic;
+        color: var(--text-color);
+    }
+
+    .signup {
+        padding: 100px 0;
+        text-align: center;
+    }
+
+    .signup h2 {
+        font-family: 'Orbitron', sans-serif;
+        font-size: 36px;
+        margin-bottom: 30px;
+        color: var(--primary-color);
+    }
+
+    .signup-form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .signup-form input {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        border: 1px solid var(--primary-color);
+        background-color: rgba(26, 26, 46, 0.8);
+        color: var(--text-color);
+        border-radius: 5px;
+    }
+
+    .signup-form button {
+        width: 100%;
+        padding: 15px;
+        background-color: var(--accent-color);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 20px rgba(255, 0, 168, 0.5);
+    }
+
+    .signup-form button:hover {
+        background-color: #FF40B8;
+        box-shadow: 0 0 30px rgba(255, 0, 168, 0.8);
+    }
+
+    .dropshipping-symbols {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .crypto {
+        padding: 100px 0;
+        background-color: var(--bg-color);
+    }
+
+    .crypto h2 {
+        text-align: center;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 36px;
+        margin-bottom: 50px;
+        color: var(--primary-color);
+    }
+
+    #crypto-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #crypto-table th, #crypto-table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid var(--primary-color);
+    }
+
+    #crypto-table th {
+        font-family: 'Orbitron', sans-serif;
+        color: var(--primary-color);
+    }
+
+    #crypto-table td {
+        color: var(--text-color);
+    }
+
+    .crypto-symbol {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    .price-up {
+        color: #00ff00;
+    }
+
+    .price-down {
+        color: #ff0000;
+    }
+
+    .whatsapp-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes popupAnimation {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    .message-box {
+        animation: popupAnimation 2s infinite;
+        transform-origin: center;
+    }
+
+    .message-text {
+        animation: popupAnimation 2s infinite;
+        transform-origin: center;
+    }
+
+    .left-message {
+        animation-delay: 0.5s;
+    }
+
+    .right-message {
+        animation-delay: 1s;
+    }
+
+    @media (max-width: 768px) {
+        .hero-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .hero-text, .hero-image {
+            flex: none;
+            width: 100%;
+        }
+
+        .hero-image {
+            margin-top: 30px;
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        .hero {
+            padding-top: 120px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+    }
+</style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">TradeShop</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#stats">Stats</a>
+                <a href="#crypto">Crypto</a>
+                <a href="#signup">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="dropshipping-symbols"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Revolutionize Your Online Store worldwide & Trades with AI-Powered</h1>
+                <p class="subtitle">With Minimum Deposit of $100 start your Journey Now. Everything is Automatic!</p>
+                <p>TradeShop harnesses cutting-edge artificial intelligence to automate and optimize your entire dropshipping operation. From product selection to order fulfillment, our AI does it all, allowing you to scale your business empire effortlessly.</p>
+                <a href="#signup" class="cta-button" id="start-journey-btn">Start Your AI Journey</a>
+            </div>
+            <div class="hero-image">
+                <svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Phone 1 - Dropshipping Platform -->
+                    <rect x="50" y="50" width="180" height="350" rx="20" fill="#1A1A2E" />
+                    <rect x="60" y="70" width="160" height="300" rx="10" fill="#00F0FF" />
+                    <rect x="70" y="90" width="140" height="260" fill="#0F0F1A" />
+                    <path d="M110 180 L170 180 L170 240 L110 240 Z" fill="#FF00A8" />
+                    <path d="M110 180 L140 160 L170 180" fill="#FF00A8" />
+                    <path d="M140 180 L140 240" stroke="#FFFFFF" stroke-width="2" />
+                    <path d="M110 210 L170 210" stroke="#FFFFFF" stroke-width="2" />
+                    <circle cx="140" cy="225" r="8" fill="#00F0FF" />
+                    <!-- New text message -->
+                    <rect x="65" y="280" width="150" height="60" rx="5" fill="#FFFFFF" class="message-box left-message" />
+                    <text x="70" y="300" font-family="Arial" font-size="10" fill="#000000" class="message-text left-message">
+                        <tspan x="70" dy="0">You Have An Order</tspan>
+                        <tspan x="70" dy="15">in your Online store</tspan>
+                    </text>
+
+                    <!-- Phone 2 - Trading Platform -->
+                    <rect x="270" y="100" width="180" height="350" rx="20" fill="#1A1A2E" />
+                    <rect x="280" y="120" width="160" height="300" rx="10" fill="#00F0FF" />
+                    <rect x="290" y="140" width="140" height="260" fill="#0F0F1A" />
+                    <!-- Stocks list -->
+                    <text x="300" y="160" font-family="Arial" font-size="12" fill="#FFFFFF">AAPL $150.25 +2.3%</text>
+                    <text x="300" y="180" font-family="Arial" font-size="12" fill="#FFFFFF">GOOGL $2750.10 -0.5%</text>
+                    <text x="300" y="200" font-family="Arial" font-size="12" fill="#FFFFFF">AMZN $3300.75 +1.8%</text>
+                    <!-- Enhanced chart -->
+                    <path d="M300 360 L330 320 L360 340 L390 300 L420 330 L430 320" stroke="#FF00A8" stroke-width="3" fill="none" />
+                    <circle cx="330" cy="320" r="4" fill="#00F0FF" />
+                    <circle cx="360" cy="340" r="4" fill="#00F0FF" />
+                    <circle cx="390" cy="300" r="4" fill="#00F0FF" />
+                    <circle cx="420" cy="330" r="4" fill="#00F0FF" />
+                    <!-- Additional chart elements -->
+                    <line x1="290" y1="370" x2="430" y2="370" stroke="#FFFFFF" stroke-width="1" />
+                    <line x1="290" y1="370" x2="290" y2="230" stroke="#FFFFFF" stroke-width="1" />
+                    <text x="285" y="225" font-family="Arial" font-size="10" fill="#FFFFFF">$</text>
+                    <text x="435" y="375" font-family="Arial" font-size="10" fill="#FFFFFF">t</text>
+                    <!-- New text message -->
+                    <rect x="285" y="370" width="150" height="60" rx="5" fill="#FFFFFF" class="message-box right-message" />
+                    <text x="290" y="390" font-family="Arial" font-size="10" fill="#000000" class="message-text right-message">
+                        <tspan x="290" dy="0">You Won Your</tspan>
+                        <tspan x="290" dy="15">open Trade</tspan>
+                    </text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose TradeShop?</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Quantum AI Automation</h3>
+                    <p>Our advanced AI handles everything from product research to customer support, freeing your time for strategic growth.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📈</div>
+                    <h3>Predictive Analytics</h3>
+                    <p>Harness the power of real-time insights and future predictions to make data-driven decisions and maximize profits.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Hypergrowth Scaling</h3>
+                    <p>Expand your product range and conquer new markets effortlessly with our AI-powered market analysis and optimization.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Full Automation & Trading</h3>
+                    <p>Our AI System handles everything automatically: Advertisement, Reports, Shipping, and Inventory. For trading, the AI opens profitable trades automatically, allowing you to relax and enjoy your free time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="crypto" class="crypto">
+        <div class="container">
+            <h2>Live Cryptocurrency Prices</h2>
+            <table id="crypto-table">
+                <thead>
+                    <tr>
+                        <th>Coin</th>
+                        <th>Price</th>
+                        <th>24h Change</th>
+                    </tr>
+                </thead>
+                <tbody id="crypto-body">
+                    <!-- Cryptocurrency data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="stats" class="stats">
+        <div class="container stats-container">
+            <div class="stat-item">
+                <h4 id="activeUsers">0</h4>
+                <p>Active Users</p>
+            </div>
+            <div class="stat-item">
+                <h4 id="productsManaged">0</h4>
+                <p>Products Managed</p>
+            </div>
+            <div class="stat-item">
+                <h4 id="averageRoi">0</h4>
+                <p>Average ROI</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="review-grid">
+                <div class="review-item">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Happy client Sarah" class="review-image">
+                    <h3>Sarah T.</h3>
+                    <p>"TradeShop has completely transformed my online business. The AI-powered tools are simply amazing!"</p>
+                </div>
+                <div class="review-item">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Happy client Michael" class="review-image">
+                    <h3>Michael R.</h3>
+                    <p>"I've seen a 300% increase in my profits since using TradeShop. It's a game-changer!"</p>
+                </div>
+                <div class="review-item">
+                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Happy client Emily" class="review-image">
+                    <h3>Emily W.</h3>
+                    <p>"The automated dropshipping feature is incredible. I can focus on growing my business while TradeShop handles the rest."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="signup" class="signup">
+        <div class="container">
+            <h2>Ready to Transform Your Dropshipping Online Business or Trading?</h2>
+            <form class="signup-form">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <button type="submit">Launch Your AI-Powered Future</button>
+            </form>
+        </div>
+    </section>
+
+    <a href="https://wa.me/1234567890?text=Hello%2C%20I%27m%20looking%20forward%20for%20your%20services%20of%20Dropshipping%20%26%20Trading." class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Animate stats
+        function animateValue(id, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                document.getElementById(id).textContent = value.toLocaleString();
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Trigger animations when scrolled into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateValue("activeUsers", 0, 5678, 2000);
+                    animateValue("productsManaged", 0, 10000000, 2000);
+                    animateValue("averageRoi", 0, 500, 2000);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(document.querySelector('.stats'));
+
+        // Smooth scrolling function
+        function smoothScroll(target, duration) {
+            const targetElement = document.querySelector(target);
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+        // Add event listener to the "Start Your AI Journey" button
+        document.getElementById('start-journey-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            smoothScroll('#signup', 1200); // 1200ms = 1.2 seconds
+        });
+
+        // Form submission
+        document.querySelector('.signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+
+            // Simulate sending an email
+            sendEmail(name, email, phone);
+
+            alert('Thank you for your interest! We will contact you shortly with more information about TradeShop. A confirmation email has been sent to your address with details about a free integration.');
+            this.reset();
+        });
+
+        // Simulate sending an email
+        function sendEmail(name, email, phone) {
+            console.log(`Simulating email sent to: John.shoppyai@gmail.com`);
+            console.log(`Subject: New TradeShop Sign-up and Free Integration`);
+            console.log(`Body: 
+                New user signed up for TradeShop:
+                Name: ${name}
+                Email: ${email}
+                Phone: ${phone}
+
+                A free integration will be provided for this user. Please follow up with the integration details.
+            `);
+        }
+
+        // Create interactive dropshipping symbols
+        const symbolsContainer = document.querySelector('.dropshipping-symbols');
+        const symbols = ['📦', '🚚', '🌐', '💻', '📱', '🛒', '💳', '📊'];
+        const symbolCount = 50;
+
+        for (let i = 0; i < symbolCount; i++) {
+            const symbol = document.createElement('div');
+            symbol.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+            symbol.style.position = 'absolute';
+            symbol.style.left = `${Math.random() * 100}%`;
+            symbol.style.top = `${Math.random() * 100}%`;
+            symbol.style.fontSize = `${Math.random() * (30 - 10) + 10}px`;
+            symbol.style.opacity = '0.3';
+            symbol.style.transform = `rotate(${Math.random() * 360}deg)`;
+            symbol.style.transition = 'all 3s ease-in-out';
+            symbolsContainer.appendChild(symbol);
+
+            setInterval(() => {
+                symbol.style.left = `${Math.random() * 100}%`;
+                symbol.style.top = `${Math.random() * 100}%`;
+                symbol.style.transform = `rotate(${Math.random() * 360}deg)`;
+            }, 3000);
+        }
+
+        function fetchCryptoData() {
+            fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false')
+                .then(response => response.json())
+                .then(data => {
+                    const cryptoBody = document.getElementById('crypto-body');
+                    cryptoBody.innerHTML = '';
+                    data.forEach(coin => {
+                        const row = document.createElement('tr');
+                        const priceChangeClass = coin.price_change_percentage_24h >= 0 ? 'price-up' : 'price-down';
+                        row.innerHTML = `
+                            <td><img src="${coin.image}" alt="${coin.name}" class="crypto-symbol"> ${coin.name}</td>
+                            <td>$${coin.current_price.toFixed(2)}</td>
+                            <td class="${priceChangeClass}">${coin.price_change_percentage_24h.toFixed(2)}%</td>
+                        `;
+                        cryptoBody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Error fetching crypto data:', error));
+        }
+
+        // Fetch crypto data initially and then every 60 seconds
+        fetchCryptoData();
+        setInterval(fetchCryptoData, 60000);
+    </script>
+</body>
+</html>
